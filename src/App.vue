@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img :src="logo">
+    <img :src="logo" @click="onClick('123','456')">
     <Tab/>
   </div>
 </template>
@@ -21,6 +21,11 @@ export default {
     return {
       logo: logo
     };
+  },
+  methods: {
+    onClick(index, title) {
+      this.$toast(title);
+    }
   }
 };
 </script>

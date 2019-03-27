@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <img :src="logo" @click="onClick('123','456')">
-    <Tab/>
+    <!-- <vue-slider v-model="value"></vue-slider> -->
+    <Slide/>
+    <!-- <img :src="logo" @click="onClick('123','456')"> -->
+    <!-- //<Tab/> -->
   </div>
 </template>
 
@@ -10,12 +12,14 @@
 //
 
 //import HelloWorld from "./components/HelloWorld.vue";
-import Tab from "./components/Tab.vue";
+// import Tab from "./components/Tab.vue";
+// import FileUpload from "./components/FileUpload.vue";
+import Slide from "./components/Slide.vue";
 import logo from "./assets/logo.png";
 export default {
   name: "app",
   components: {
-    Tab
+    Slide
   },
   data() {
     return {

@@ -3,8 +3,12 @@ import App from './App.vue'
 import Vant from 'vant';
 import 'vant/lib/index.css';
 
-Vue.use(Vant);
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// require styles
+import 'swiper/dist/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
 
+Vue.use(Vant);
 Vue.config.productionTip = false
 
 new Vue({

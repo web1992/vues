@@ -48,7 +48,7 @@ export default {
     },
     reachEnd: function() {
       // if (!this.params.debugger) return;
-      console.log("reachEnd");
+      // console.log("reachEnd");
       if (this.begin < this.maxLen) {
         this.slideList.push("I'm Slide " + this.begin++);
       }

@@ -2,7 +2,7 @@
   <div class="tab">
     <van-tabbar v-model="active">
       <van-tabbar-item info="3">
-        <span>自定义</span>
+        <span>自定义{{ $route.params.id }}</span>
         <img slot="icon" slot-scope="props" :src="props.active ? icon.active : icon.normal">
       </van-tabbar-item>
       <van-tabbar-item icon="search">标签</van-tabbar-item>
@@ -22,6 +22,9 @@ export default {
         active: logo
       }
     };
+  },
+  mounted: function() {
+    this.$toast(this.$route.params.id);
   }
 };
 </script>

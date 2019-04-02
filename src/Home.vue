@@ -10,7 +10,7 @@
           <router-link to="/tab/1">Go to tab</router-link>
         </li>
         <li>
-          <router-link to="/slide">Go to slide</router-link>
+          <router-link to="/slide/123">Go to slide</router-link>
         </li>
       </ul>
     </div>

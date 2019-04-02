@@ -24,10 +24,27 @@ const routes = [
         }
     },
     {
+        path: '/slide/:id',
         name: 'slide',
         component: () => import('./components/Slide.vue'),
         meta: {
             title: 'slide'
+        }
+    },
+    {
+        path: '/iview',
+        name: 'iview',
+        component: () => import('./components/Iview.vue'),
+        meta: {
+            title: 'iview'
+        }
+    },
+    {
+        path: '/virtualSlides',
+        name: 'virtualSlides',
+        component: () => import('./components/VirtualSlides.vue'),
+        meta: {
+            title: 'virtualSlides'
         }
     }
 ];

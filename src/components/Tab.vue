@@ -1,5 +1,6 @@
 <template>
   <div class="tab">
+    <router-link to="/slide/456">Go to slide</router-link>
     <van-tabbar v-model="active">
       <van-tabbar-item info="3">
         <span>自定义{{ $route.params.id }}</span>

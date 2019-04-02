@@ -1,26 +1,29 @@
 <!-- The ref attr used to find the swiper instance -->
 <template>
-  <swiper
-    :options="swiperOption"
-    ref="mySwiper"
-    @transitionStart="transitionStart"
-    @reachBeginning="reachBeginning"
-    @slideChange="slideChange"
-    @reachEnd="reachEnd"
-    @fromEdge="fromEdge"
-  >
-    <!-- slides -->
-    <swiper-slide class="orange-slide" v-for="(slide,i) in slideList" :key="i">{{slide}}</swiper-slide>
+  <div>
+    <router-link to="/tab/100">Go to tab</router-link>
+    <swiper
+      :options="swiperOption"
+      ref="mySwiper"
+      @transitionStart="transitionStart"
+      @reachBeginning="reachBeginning"
+      @slideChange="slideChange"
+      @reachEnd="reachEnd"
+      @fromEdge="fromEdge"
+    >
+      <!-- slides -->
+      <swiper-slide class="orange-slide" v-for="(slide,i) in slideList" :key="i">{{slide}}</swiper-slide>
 
-    <!-- <swiper-slide class="orange-slide">I'm Slide 1</swiper-slide>
-    <swiper-slide class="red-slide">I'm Slide 2</swiper-slide>-->
-    <!-- <swiper-slide class="blue-slide">I'm Slide 3</swiper-slide> -->
-    <!-- Optional controls -->
-    <!-- <div class="swiper-pagination"  slot="pagination"></div>
+      <!-- <swiper-slide class="orange-slide">I'm Slide 1</swiper-slide>
+      <swiper-slide class="red-slide">I'm Slide 2</swiper-slide>-->
+      <!-- <swiper-slide class="blue-slide">I'm Slide 3</swiper-slide> -->
+      <!-- Optional controls -->
+      <!-- <div class="swiper-pagination"  slot="pagination"></div>
     <div class="swiper-button-prev" slot="button-prev"></div>
     <div class="swiper-button-next" slot="button-next"></div>
-    <div class="swiper-scrollbar"   slot="scrollbar"></div>-->
-  </swiper>
+      <div class="swiper-scrollbar"   slot="scrollbar"></div>-->
+    </swiper>
+  </div>
 </template>
 
 <script>

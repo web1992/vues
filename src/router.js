@@ -46,6 +46,14 @@ const routes = [
         meta: {
             title: 'virtualSlides'
         }
+    },
+    {
+        path: '/file',
+        name: 'file',
+        component: () => import('./components/File.vue'),
+        meta: {
+            title: 'file'
+        }
     }
 ];
 

@@ -10,6 +10,11 @@
       :titles="titles"
       :selected-keys="selectedKeys"
     ></Transfer>
+    <div label="xxx" v-for="(tag,i) in selectTags" :key="i">
+      <Checkbox :value="tag.selection==1">
+        <span>{{tag.name}}</span>
+      </Checkbox>
+    </div>
   </div>
 </template>
 
@@ -21,7 +26,8 @@ export default {
       selectedKeys: [],
       notSelectionData: [], // 未选择的数据
       selectionData: [], // 已经选择的数据
-      titles: ["未选择的", "已经选择的"]
+      titles: ["未选择的", "已经选择的"],
+      selectTags: []
     };
   },
   methods: {
@@ -43,6 +49,9 @@ export default {
         console.log("data.selection", data.selection == 1);
         if (data.selection == 1) {
           this.selectionData.push(data.id);
+          data.tagS.forEach(tag => {
+            this.selectTags.push(tag);
+          });
         }
       }
       console.log("dataList getSelectData", this.selectionData);
@@ -51,6 +60,22 @@ export default {
     handleChange2(newTargetKeys) {
       this.selectionData = newTargetKeys;
       console.log("selectedKeys", this.selectedKeys);
+      this.changeTags();
+    },
+    // 显示选择的tags
+    changeTags() {
+      this.selectTags = [];
+      let selectionData = this.selectionData;
+      selectionData.forEach(id => {
+        for (let i = 0; i <= demo.length - 1; i++) {
+          let data = demo[i];
+          if (data.id == id) {
+            data.tagS.forEach(tag => {
+              this.selectTags.push(tag);
+            });
+          }
+        }
+      });
     },
     filterMethod(data, query) {
       return data.label.indexOf(query) > -1;

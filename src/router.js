@@ -54,6 +54,14 @@ const routes = [
         meta: {
             title: 'file'
         }
+    },
+    {
+        path: '/transfer',
+        name: 'transfer',
+        component: () => import('./components/Transfer.vue'),
+        meta: {
+            title: 'transfer'
+        }
     }
 ];
 
